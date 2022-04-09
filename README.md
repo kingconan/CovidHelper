@@ -1,11 +1,16 @@
 # 如何设置
+
 1. 首先需要抓包环境，charles，公司有买这个，可以邮件里找找。
 2. 需要python环境，最好是最新版本。 https://www.python.org/downloads/macos/ mac请使用最新的3.10.x版本
 3. python库只依赖 `pip install requests`，原版本还有微信通知和声音效果，我这里都去掉了。可以去看原版本 https://gist.github.com/0xKira/87cc84e7eddc462719f3e8f3e6a3728e
 4. 开发环境PyCharm即可
 5. 注意抓好包记得关掉charles的mac proxy，否则影响mac上网
+6. 和原版本区别还有就是注释了request和下单的sleep （根据飙哥的建议）
+
+祝好运
 
 # 运行
+
 使用了module，在根目录需要如下运行
 `python -m src.mini.dingdong`
 
