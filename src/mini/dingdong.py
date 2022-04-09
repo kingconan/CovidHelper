@@ -15,7 +15,8 @@ device_token = unquote("")
 # longitude = "121.431275"  # 经度
 # latitude = "31.350273"  # 纬度
 # address_id = "624e236fe51a800001b7e154"  # 收货地址
-
+# station_id = ""  站点id
+# city_number = "" 城市id
 
 address = {  # yangpu
         'latitude': "31.309978",
