@@ -6,6 +6,10 @@ import datetime
 import json
 import traceback
 
+'''
+！！以下参数需要抓包获取
+pub_headers 里的其他字段，比如user-agent也可以写死抓包结果
+'''
 # /order/getMultiReserveTime 抓包获得以下参数
 uid = ""
 s_id = ""
@@ -16,17 +20,17 @@ device_token = unquote("")
 # latitude = "31.350273"  # 纬度
 # address_id = "624e236fe51a800001b7e154"  # 收货地址
 # station_id = ""  站点id
-# city_number = "" 城市id
+# city_number = "" 城市id，0101 上海
 
-address = {  # yangpu
-        'latitude': "31.309978",
-        'longitude': "121.490968",
-        'station_id': '5c0f2468716de1e77d8b4a6d',
-        'city_number': '0101',
-        'address_id': '624fde1837ba6a0001ff15fd'
+address = {
+        'latitude': "",
+        'longitude': "",
+        'station_id': "",
+        'city_number': "",
+        'address_id': ""
     }
-
-latitude = address['latitude'] #"31.309978"
+#####################################################
+latitude = address['latitude']
 longitude = address['longitude']
 address_id = address['address_id']
 
@@ -120,9 +124,11 @@ def do_request(typ: str, url: str, headers: dict, data: dict) -> dict:
     return resp
 
 def update_location_info(config=None):
+    print(config)
     global pub_headers, pub_request_params
     log("更新配送站信息...")
-    if config is None:
+    if config is None or not config.get('station_id') or not config.get('city_number'):
+        log('get location info from API')
         r = requests.get(
             url="https://sunquan.api.ddxq.mobi/api/v2/user/location/refresh/",
             params={"longitude": config['longitude'], "latitude": config['latitude']},
@@ -135,6 +141,7 @@ def update_location_info(config=None):
         pub_request_params["station_id"] = station_id
         pub_request_params["city_number"] = city_number
     else:
+        log('get location info from config')
         pub_headers["ddmc-station-id"] = config['station_id']
         pub_headers["ddmc-city-number"] = config['city_number']
         pub_headers["ddmc-longitude"] = config['longitude']
@@ -368,7 +375,7 @@ def main(retry_avail_times=0, address=None):
 
 
 if __name__ == '__main__':
-    main(address=address)
-    # update_location_info(config=address)
+    # main(address=address)
+    update_location_info(config=address)
     # update_product_from_cart()
     # check_delivery_time(address)
