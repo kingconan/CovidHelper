@@ -7,11 +7,10 @@ import json
 import traceback
 
 # /order/getMultiReserveTime 抓包获得以下参数
-uid = "624e234dbda7170001fc5600"
-s_id = "0f76a469198fef703f54c243f736dba1"
-device_id = "osP8I0YiXfhOxExmDKzaBfA9bpRk"
-device_token = unquote(
-    "WHJMrwNw1k/F0qdLNvE01AZQpsF21MOm9byDFMVVfiiE6jirQDRbwJSdZmW8XQFz8JQYpItqptjrlo1pucfZ+nLGQK0pVwThNdCW1tldyDzmauSxIJm5Txg==1487582755342")
+uid = ""
+s_id = ""
+device_id = ""
+device_token = unquote("")
 # 以下会随地址而变化
 # longitude = "121.431275"  # 经度
 # latitude = "31.350273"  # 纬度
