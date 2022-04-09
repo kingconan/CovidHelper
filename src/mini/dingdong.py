@@ -17,23 +17,6 @@ device_token = unquote("")
 # address_id = "624e236fe51a800001b7e154"  # 收货地址
 
 
-addresses = {
-    'yangpu': {  # yangpu
-        'latitude': "31.309978",
-        'longitude': "121.490968",
-        'station_id': '5c0f2468716de1e77d8b4a6d',
-        'city_number': '0101',
-        'address_id': '624fde1837ba6a0001ff15fd'
-    },
-    'baoshan': {
-        'latitude': "31.350273",
-        'longitude': "121.431275",
-        'station_id': '5b779d6301a6eaaf048b9eb5',
-        'city_number': '0101',
-        'address_id': '624e236fe51a800001b7e154'
-    }
-}
-
 address = {  # yangpu
         'latitude': "31.309978",
         'longitude': "121.490968",
