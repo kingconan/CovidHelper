@@ -1,7 +1,7 @@
 # 如何设置
 
 1. 首先需要抓包环境，charles，公司有买这个，可以邮件里找找。
-2. 需要python环境，最好是最新版本。 https://www.python.org/downloads/macos/ mac请使用最新的3.10.x版本
+2. 需要python环境，最好是最新版本，因为之前代码使用了`match case`新语法，如果是老版本的要自己改成`if else`了。 https://www.python.org/downloads/macos/ mac请使用最新的3.10.x版本
 3. python库只依赖 `pip install requests`，原版本还有微信通知和声音效果，我这里都去掉了。可以去看原版本 https://gist.github.com/0xKira/87cc84e7eddc462719f3e8f3e6a3728e
 4. 开发环境PyCharm即可
 5. 注意抓好包记得关掉charles的mac proxy，否则影响mac上网
@@ -11,10 +11,16 @@
 
 祝好运
 
-# 运行
+# 操作
 
 使用了module，在根目录需要如下运行
 `python -m src.mini.dingdong`
+
+至于操作时机，根据叮咚CEO的建议
+1. 6：00 （主肉），8：30（主菜），提前加入购物车。据说10分前会上新很多，如果之前没货的话，这时多刷
+2. 55秒时可以运行程序，因为脚本的前置操作也会花些时间（购物车更新，配送时间获取等）
+
+
 
 
 # 抓包设置
