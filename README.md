@@ -5,7 +5,7 @@
 3. python库只依赖 `pip install requests`，原版本还有微信通知和声音效果，我这里都去掉了。可以去看原版本 https://gist.github.com/0xKira/87cc84e7eddc462719f3e8f3e6a3728e
 4. 开发环境PyCharm即可
 5. 注意抓好包记得关掉charles的mac proxy，否则影响mac上网
-6. 和原版本区别还有就是注释了request和下单的sleep （根据飙哥的建议）
+6. 和原版本区别还有就是注释了request和下单的sleep （根据飙哥的建议），还有就是配送站点写死了，少一个请求。
 
 另外就是要先测试，下午时段可以买葱试试，有问题和一起探讨。
 
