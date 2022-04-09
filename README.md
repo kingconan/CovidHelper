@@ -1,5 +1,4 @@
 #如何设置
-
 1. 首先需要抓包环境，charles，公司有买这个，可以邮件里找找。
 
 2. 需要python环境，最好是最新版本。 https://www.python.org/downloads/macos/ mac请使用最新的3.10.x版本
