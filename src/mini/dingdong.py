@@ -338,7 +338,7 @@ def main(retry_avail_times=0, address=None):
                     case "NOTE_ORDER_SPECIAL":  # 暂未营业，请6点后再试。
                         break
                     # 有商品缺货；商品总价错误；商品信息有变化，请重新下单
-                    case "PRODUCT_OUT_OF_STOCK" | "WRONG_TOTAL_PRICE" | "PRODUCT_INFO_HAS_CHANGED":
+                    case "SOLD_OUT" | "PRODUCT_OUT_OF_STOCK" | "WRONG_TOTAL_PRICE" | "PRODUCT_INFO_HAS_CHANGED":
                         update_product_from_cart()
                         continue
                     case "TIME_DELIVERY":  # 您选择的送达时间已经失效了，请重新选择
