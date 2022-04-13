@@ -7,7 +7,7 @@ import json
 import traceback
 
 '''
-！！以下参数需要抓包获取
+！！以下参数需要抓包获取，要使用微信小程序的叮咚买菜来抓
 pub_headers 里的其他字段，比如user-agent也可以写死抓包结果
 '''
 # /order/getMultiReserveTime 抓包获得以下参数
