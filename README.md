@@ -1,4 +1,7 @@
 # 如何设置
+
+java版本见 https://github.com/kingconan/dingdong-helper
+
 0. 抓包要使用叮咚微信小程序。加购物车和下单，小程序和app是都可以的。
 1. 首先需要抓包环境，charles，公司有买这个，可以邮件里找找。
 2. 需要python环境，最好是最新版本，因为之前代码使用了`match case`新语法，如果是老版本的要自己改成`if else`了。 https://www.python.org/downloads/macos/ mac请使用最新的3.10.x版本
